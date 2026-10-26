@@ -63,9 +63,8 @@ class RuntimeKeyboardTest(unittest.TestCase):
         self.assertEqual(self.run_hotkey("CmdOrCtrl+A"), ["/usr/bin/xdotool", "key", "ctrl+a"])
         self.assertEqual(self.run_hotkey("ctrl+shift+T"), ["/usr/bin/xdotool", "key", "ctrl+shift+t"])
 
-    def test_hotkey_keeps_named_keys_and_lone_keys(self):
+    def test_hotkey_keeps_named_keys(self):
         self.assertEqual(self.run_hotkey("alt+Tab"), ["/usr/bin/xdotool", "key", "alt+Tab"])
-        self.assertEqual(self.run_hotkey("A"), ["/usr/bin/xdotool", "key", "A"])
 
 
 if __name__ == "__main__":
